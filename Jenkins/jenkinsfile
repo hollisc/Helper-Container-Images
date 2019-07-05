@@ -9,9 +9,9 @@ pipeline {
     GIT_REPO='Helper-Container-Images'
     GIT_BRANCH='master'
     GIT_CREDS='github-hollisc'
-    ICP_REGISTRY_URL='https://mycluster.icp:8500'
+    ICP_REGISTRY_URL='https://devops.gse.icp1.csplab.local:8500'
     ICP_REGISTRY_CREDS='icpRegistryCred'
-    ICP_NAMESPACE='tekton-pipelines'
+    ICP_NAMESPACE='hollisc'
     IMAGE_NAME='kubectl'
     DOCKERFILE_PATH='./Dockerfiles/docker-kubectl'
     }
