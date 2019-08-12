@@ -2,6 +2,7 @@ FROM alpine
 
 RUN ls
 RUN pwd
+RUN ls -la /usr/local/bin
 
 ENV KUBE_LATEST_VERSION="v1.15.0"
 
@@ -13,5 +14,9 @@ RUN chmod +x /usr/local/bin/kubectl
 Add https://get.helm.sh/helm-v2.14.3-linux-amd64.tar.gz /usr/local/bin/helm
 RUN chmod +x /usr/local/bin/helm
 
-COPY /home/jenkins/workspace/Hollis/Build-and-Push-Reference-Tooling-Images/Dockerfiles/Dockerfiles/docker-kubectl-helm-cloudctl/cloudctl-linux-ppc64le-3.1.2-1203 /usr/local/bin/cloudctl-linux-ppc64le-3.1.2-1203
+RUN ls -la /usr/local/bin
+
+COPY resources /usr/local/bin/
 RUN chmod +x /usr/local/bin/cloudctl-linux-ppc64le-3.1.2-1203
+
+RUN ls -la /usr/local/bin
