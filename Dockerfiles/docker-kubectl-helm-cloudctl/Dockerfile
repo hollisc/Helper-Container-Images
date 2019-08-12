@@ -8,11 +8,12 @@ ADD https://storage.googleapis.com/kubernetes-release/release/${KUBE_LATEST_VERS
 RUN chmod +x /usr/local/bin/kubectl
 
 Add https://get.helm.sh/helm-v2.14.3-linux-amd64.tar.gz /usr/local/bin/helm
-RUN tar -zxvf /usr/local/bin/helm-v2.0.0-linux-amd64.tgz
+RUN chmod 755 /usr/local/bin/helm
 RUN chmod +x /usr/local/bin/helm
 
 COPY resources /usr/local/bin/
 RUN mv /usr/local/bin/cloudctl-linux-ppc64le-3.1.2-1203 /usr/local/bin/cloudctl
-RUN chmod +x /usr/local/bin/cloudctl-linux-ppc64le-3.1.2-1203
+RUN chmod 755 /usr/local/bin/cloudctl
+RUN chmod +x /usr/local/bin/cloudctl
 
 RUN ls -la /usr/local/bin
