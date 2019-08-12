@@ -13,7 +13,5 @@ RUN wget -q https://storage.googleapis.com/kubernetes-helm/helm-${HELM_VERSION}-
 
 COPY resources /usr/local/bin/
 RUN chmod 755 /usr/local/bin/cloudctl-linux-amd64-3.1.2-1203
-RUN mv /usr/local/bin/cloudctl-linux-amd64-3.1.2-1203 /usr/local/bin/cloudctl
 
-RUN cloudctl --help
-RUN ls -la /usr/local/bin
+RUN mkdir ~/.cloudctl
