@@ -1,5 +1,8 @@
 FROM alpine
 
+RUN ls
+RUN pwd
+
 ENV KUBE_LATEST_VERSION="v1.15.0"
 
 RUN apk add --no-cache --update ca-certificates curl jq
